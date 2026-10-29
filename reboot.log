@@ -1,0 +1,181 @@
+
+PLAY [Weekly system reboot] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [node1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.225.81.13 port 22: Connection refused", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+node1                      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Weekly system reboot] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node1]
+
+TASK [Uptime before reboot] ****************************************************
+ok: [node1]
+
+TASK [Reboot and wait until the node is back] **********************************
+changed: [node1]
+
+TASK [Uptime after reboot] *****************************************************
+ok: [node1]
+
+TASK [Show result] *************************************************************
+ok: [node1] => {
+    "msg": "Before: up 2 minutes | After: up 0 minutes"
+}
+
+PLAY [Weekly system reboot] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node2]
+
+TASK [Uptime before reboot] ****************************************************
+ok: [node2]
+
+TASK [Reboot and wait until the node is back] **********************************
+changed: [node2]
+
+TASK [Uptime after reboot] *****************************************************
+ok: [node2]
+
+TASK [Show result] *************************************************************
+ok: [node2] => {
+    "msg": "Before: up 2 minutes | After: up 0 minutes"
+}
+
+PLAY RECAP *********************************************************************
+node1                      : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+node2                      : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Weekly system reboot] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node1]
+
+TASK [Uptime before reboot] ****************************************************
+ok: [node1]
+
+TASK [Reboot and wait until the node is back] **********************************
+changed: [node1]
+
+TASK [Uptime after reboot] *****************************************************
+ok: [node1]
+
+TASK [Show result] *************************************************************
+ok: [node1] => {
+    "msg": "Before: up 0 minutes | After: up 0 minutes"
+}
+
+PLAY [Weekly system reboot] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node2]
+
+TASK [Uptime before reboot] ****************************************************
+ok: [node2]
+
+TASK [Reboot and wait until the node is back] **********************************
+changed: [node2]
+
+TASK [Uptime after reboot] *****************************************************
+ok: [node2]
+
+TASK [Show result] *************************************************************
+ok: [node2] => {
+    "msg": "Before: up 0 minutes | After: up 0 minutes"
+}
+
+PLAY RECAP *********************************************************************
+node1                      : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+node2                      : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Weekly system reboot] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node1]
+
+TASK [Uptime before reboot] ****************************************************
+ok: [node1]
+
+TASK [Reboot and wait until the node is back] **********************************
+changed: [node1]
+
+TASK [Uptime after reboot] *****************************************************
+ok: [node1]
+
+TASK [Show result] *************************************************************
+ok: [node1] => {
+    "msg": "Before: up 1 minute | After: up 0 minutes"
+}
+
+PLAY [Weekly system reboot] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node2]
+
+TASK [Uptime before reboot] ****************************************************
+ok: [node2]
+
+TASK [Reboot and wait until the node is back] **********************************
+changed: [node2]
+
+TASK [Uptime after reboot] *****************************************************
+ok: [node2]
+
+TASK [Show result] *************************************************************
+ok: [node2] => {
+    "msg": "Before: up 1 minute | After: up 1 minute"
+}
+
+PLAY RECAP *********************************************************************
+node1                      : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+node2                      : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Weekly system reboot] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node1]
+
+TASK [Uptime before reboot] ****************************************************
+ok: [node1]
+
+TASK [Reboot and wait until the node is back] **********************************
+changed: [node1]
+
+TASK [Uptime after reboot] *****************************************************
+ok: [node1]
+
+TASK [Show result] *************************************************************
+ok: [node1] => {
+    "msg": "Before: up 1 minute | After: up 0 minutes"
+}
+
+PLAY [Weekly system reboot] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node2]
+
+TASK [Uptime before reboot] ****************************************************
+ok: [node2]
+
+TASK [Reboot and wait until the node is back] **********************************
+changed: [node2]
+
+TASK [Uptime after reboot] *****************************************************
+ok: [node2]
+
+TASK [Show result] *************************************************************
+ok: [node2] => {
+    "msg": "Before: up 1 minute | After: up 0 minutes"
+}
+
+PLAY RECAP *********************************************************************
+node1                      : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+node2                      : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

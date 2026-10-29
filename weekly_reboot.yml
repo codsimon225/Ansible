@@ -1,0 +1,25 @@
+---
+- name: Weekly system reboot
+  hosts: lab
+  become: true
+  serial: 1                     # reboot one node at a time (rolling)
+
+  tasks:
+    - name: Uptime before reboot
+      ansible.builtin.command: uptime -p
+      register: before
+      changed_when: false
+
+    - name: Reboot and wait until the node is back
+      ansible.builtin.reboot:
+        msg: "Weekly reboot by Ansible"
+        reboot_timeout: 300
+
+    - name: Uptime after reboot
+      ansible.builtin.command: uptime -p
+      register: after
+      changed_when: false
+
+    - name: Show result
+      ansible.builtin.debug:
+        msg: "Before: {{ before.stdout }} | After: {{ after.stdout }}"
